@@ -11,6 +11,7 @@ export default function From(props) {
 							className="form-control"
 							placeholder="City"
 							name="city"
+							onChange={() => props.setError(false)}
 							autoComplete="off"
 						/>
 					</div>
@@ -20,6 +21,7 @@ export default function From(props) {
 							className="form-control"
 							placeholder="Country"
 							name="country"
+							onChange={() => props.setError(false)}
 							autoComplete="off"
 						/>
 					</div>

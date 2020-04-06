@@ -15,11 +15,11 @@ export default function App() {
 	const [iconId, setIconId] = useState('')
 	const [error, setError] = useState(false)
 
-	const calCelcius = temp => {
+	const calCelcius = (temp) => {
 		let cel = Math.floor(temp - 273.15)
 		return cel
 	}
-	const getWeather = async e => {
+	const getWeather = async (e) => {
 		e.preventDefault()
 		const city = e.target.elements.city.value
 		const country = e.target.elements.country.value
@@ -49,6 +49,7 @@ export default function App() {
 					error={error}
 					city={city}
 					country={country}
+					setError={setError}
 				/>
 			</div>
 			<Weather
